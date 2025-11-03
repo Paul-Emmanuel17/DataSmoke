@@ -1,0 +1,37 @@
+:root{
+  --seasalt:#F7F7F7; --night:#101216; --platinum:#D9DEE6; --prussian:#0D2B45; --jungle:#1FA37D;
+  --butterscotch:#C88C3B; --mslate:#7A77FF; --auburn:#9B2C2C; --brunswick:#2F5D50; --frenchgray:#D0D3DA;
+  --bg:var(--seasalt); --text:var(--night); --rouge:var(--auburn); --or:var(--butterscotch);
+  --violet:var(--mslate); --border:var(--frenchgray);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Lora", Georgia, "Times New Roman", serif;line-height:1.65}
+
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;height:42vh;min-height:220px;max-height:420px;background:var(--rouge);
+  clip-path:polygon(0 0,100% 0,100% 58%,50% 92%,0 58%)}
+.hero-inner{position:relative;padding:2.2rem 1rem 3.2rem;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:42vh}
+.brand{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.brand h1{font-family:"Bebas Neue", system-ui, sans-serif;letter-spacing:.5px;font-weight:400;font-size:clamp(2.2rem,6vw,4rem);margin:0;color:#fff;text-transform:uppercase}
+.brand h2{font-family:"Lora", serif;margin:0;color:#f5f5f5;font-weight:600;font-size:clamp(1.05rem,2.2vw,1.25rem);text-shadow:0 1px 0 rgba(0,0,0,.15)}
+.mission{max-width:860px;margin:.75rem auto 0;color:#fff;opacity:.95;text-align:center}
+
+nav ul{list-style:none;display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin:1rem 0 0;padding:0}
+nav a{display:inline-block;color:var(--rouge);background:#fff;border:2px solid #fff;padding:.45rem .8rem;border-radius:999px;text-decoration:none;font-weight:600}
+nav a:hover{background:transparent;color:#fff}
+
+main{max-width:980px;margin:2.2rem auto;padding:0 1rem}
+section{margin-bottom:2.4rem}
+section h3{font-family:"Bebas Neue", system-ui, sans-serif;letter-spacing:.6px;text-transform:uppercase;color:var(--prussian);margin:.2rem 0 .4rem;font-size:1.6rem}
+
+.panel{background:#fff;border:6px double var(--rouge);border-radius:10px;box-shadow:0 10px 24px rgba(16,18,22,.12);padding:20px;outline:1px solid var(--border)}
+.panel-title{margin:0 0 .6rem;color:var(--rouge);text-align:center;font-family:'Bebas Neue',system-ui,sans-serif;letter-spacing:.6px}
+
+#chart{width:100%;height:560px}
+
+footer{background:var(--rouge);color:#fff;text-align:center;padding:1rem;border-top:4px solid #7c2020}
+
+a{color:var(--prussian)} a:hover{color:var(--violet);text-decoration:none}
+.muted{color:#5a5d66}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Smoke</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <header class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="brand">
+        <h1>Data Smoke</h1>
+        <h2>Tabac et Cigarette électronique en France</h2>
+      </div>
+      <p class="mission">
+        Ce site a pour mission de sensibiliser à l’impact du tabagisme et du vapotage en France, en rendant les
+        données compréhensibles et accessibles à tous, pour encourager la prévention et des choix de vie plus sains.
+      </p>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#contexte">Contexte</a></li>
+          <li><a href="#sources">Sources</a></li>
+          <li><a href="#visualisations">Visualisations</a></li>
+          <li><a href="#mentions">Mentions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contexte">
+      <h3>Contexte</h3>
+      <p>
+        Le tabac reste l’une des principales causes de mortalité évitable en France. Le vapotage, quant à lui, est
+        apparu comme une alternative récente, suscitant débats et espoirs, mais aussi de nouvelles dépendances. Ce
+        site explore les données disponibles pour mieux comprendre l’évolution de ces pratiques et leurs impacts sur la société.
+      </p>
+    </section>
+
+    <section id="visualisations">
+      <h3>Visualisations</h3>
+      <div class="panel">
+        <h4 class="panel-title">Consommation quotidienne : tabac vs cigarette électronique (2017–2023)</h4>
+        <div id="chart" role="img" aria-label="Courbes d'usage quotidien tabac et e‑cigarette, 2017–2023"></div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h3>Sources</h3>
+      <p>Les données présentées proviennent de sources publiques et officielles, notamment :</p>
+      <ul>
+        <li>OFDT (Observatoire Français des Drogues et des Tendances addictives)</li>
+        <li>Douanes françaises – livraisons mensuelles de produits du tabac</li>
+        <li>Santé publique France – Baromètre santé</li>
+      </ul>
+      <p class="muted">Ces informations seront progressivement intégrées sous forme de visualisations interactives, afin de rendre la lecture plus claire et engageante.</p>
+    </section>
+
+    <section id="mentions">
+      <h3>Mentions et ressources</h3>
+      <p>Ce site est un projet académique réalisé dans le cadre de la SAÉ 3.03 “Concevoir des visualisations de données”. Il ne collecte aucune donnée personnelle.</p>
+      <p>Sources : Douanes (Open Data), OFDT, Santé publique France.<br>
+        Besoin d’aide pour arrêter de fumer ? Consultez <a href="https://www.tabac-info-service.fr/" target="_blank" rel="noopener">Tabac Info Service</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
