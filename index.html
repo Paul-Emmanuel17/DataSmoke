@@ -7,12 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1.1" />
+  <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 </head>
 <body>
-  <header class="hero" role="banner">
-    <div class="hero-inner">
+  <header class="head1" role="banner">
+    <div class="head1-inner">
       <div class="brand">
         <h1>Data Smoke</h1>
         <h2>Tabac et Cigarette électronique en France</h2>
@@ -45,22 +45,28 @@
 
     <section id="visualisations">
       <h3>Visualisations</h3>
-
+      <div class="graph">
       <div class="panel">
         <h4 class="panel-title">Évolution 2017–2023 — usage quotidien</h4>
-        <div id="chart-evolution"></div>
+        <div id="chart-evolution" class="chart-evolution"></div>
       </div>
 
       <div class="panel">
         <h4 class="panel-title">2023 par âge — usage quotidien</h4>
-        <div id="chart-age"></div>
+        <div id="chart-age" class="chart-age"></div>
+      </div>
       </div>
     </section>
 
-    <!-- Mentions toujours présentes -->
+  </main>
+
+  <footer>
     <section id="mentions">
-      <h3>Mentions et ressources</h3>
-      <div id="mentions-content" class="collapsible" aria-hidden="true">
+      <h3>
+        <button id="toggle-mentions" class="buttonMention" type="button">Mentions</button>
+      </h3>
+
+      <div id="mentions-content" hidden>
         <p>
           Ce site est un projet académique réalisé dans le cadre de la SAÉ 3.03 “Concevoir des visualisations de données”.
           Il ne collecte aucune donnée personnelle.
@@ -71,16 +77,10 @@
           <a href="https://www.tabac-info-service.fr/" target="_blank" rel="noopener">Tabac Info Service</a>.
         </p>
       </div>
-      <button id="toggle-mentions" class="toggle-btn" aria-expanded="false" aria-controls="mentions-content">
-        🔽 Afficher les mentions
-      </button>
     </section>
-  </main>
-
-  <footer>
     <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
   </footer>
 
-  <script src="script.js?v=1.1"></script>
+  <script src="script.js?v=1.6"></script>
 </body>
 </html>
