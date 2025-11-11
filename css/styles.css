@@ -21,7 +21,7 @@ h1,h2{
 .brand h1{
   font-family:"Limelight",sans-serif;
   font-weight:500;
-  font-size:5.5rem;
+  font-size:5rem;
   margin:0;
   color:#515A5A;
   text-transform:uppercase;
@@ -35,6 +35,33 @@ h1,h2{
   font-size:clamp(1.05rem,2.2vw,1.25rem);
 }
 
+/* === BANNIÈRE IMAGE === */
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.banner img {
+  width: 50%;
+  max-width: 1400px;
+  height: auto;
+  border: 4px solid #515A5A;
+  border-radius: 10px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 1.5rem;
+  }
+  .banner img {
+    border-bottom: 3px solid #515A5A;
+  }
+}
+
 h3{
   font-size:2.5rem;
   margin-bottom:1.5rem;
@@ -46,6 +73,7 @@ h3{
   color:#FFFFFF;
   opacity:.95;
   text-align:center;
+  font-size: 1.1rem;
 }
 
 nav ul{
@@ -67,15 +95,17 @@ nav a{
   border-radius:999px;
   text-decoration:none;
   font-weight:600;
+  font-size: 1.2rem;
 }
 
 nav a:hover{
   background:transparent;
   color:#9C2007;
+  border:2px solid #9C2007;
 }
 
 main{
-  max-width:1500px;
+  max-width:1400px;
   margin:2.2rem auto;
   padding:0 1rem;
 }
@@ -120,7 +150,7 @@ section h3{
   min-width:0;
   color:#FFFFFF;
   line-height:1.7;
-  font-size:1.05rem;
+  font-size:1.1rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -130,7 +160,7 @@ section h3{
   font-family:"Bebas Neue",system-ui,sans-serif;
   color:#515A5A;
   letter-spacing:0.5px;
-  font-size:1.5rem;
+  font-size:2rem;
   margin-top:0;
   margin-bottom:0.75rem;
 }
@@ -151,6 +181,7 @@ section h3{
   display:block !important;
 }
 
+/* === EFFET D'APPARITION === */
 .fade-in{
   opacity:0;
   transform:translateY(25px);
@@ -161,46 +192,57 @@ section h3{
   transform:translateY(0);
 }
 
+/* === NOUVELLE VERSION FLEX DES BLOCS === */
 .graph-row{
-  display:grid;
-  grid-template-columns: 3fr 2fr;
-  gap:2rem;
-  align-items:stretch;
-  margin-bottom:3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.graph-row.skew-left{
-  grid-template-columns: 3fr 2fr;
+/* Bloc 1 : graph à gauche / texte à droite */
+.graph-row.skew-left .panel{
+  flex-basis: 60%;
 }
-
 .graph-row.skew-left .panel-text{
-  margin-top:.6rem;
+  flex-basis: 40%;
+  margin-top: .6rem;
 }
 
-.graph-row.skew-right{
-  grid-template-columns: 0.9fr 1.1fr;
+/* Bloc 2 : texte à gauche / graph à droite */
+.graph-row.skew-right .panel-text{
+  order: 1;
+  flex-basis: 45%;
+}
+.graph-row.skew-right .panel{
+  order: 2;
+  flex-basis: 55%;
+  margin-top: .6rem;
 }
 
-.graph-row.skew-right .panel-text{ 
-  grid-column:1; 
+/* Responsive : pile verticale sur mobile */
+@media (max-width: 900px){
+  .graph-row{
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .graph-row .panel,
+  .graph-row .panel-text{
+    order: initial;
+    flex: 1 1 100%;
+    max-width: 800px;
+  }
+  .panel-text{
+    text-align: center;
+  }
 }
 
-.graph-row.skew-right .panel{ 
-  grid-column:2; margin-top:.9rem; 
-}
-
-.graph-row.skew-left  .js-plotly-plot{ 
-  max-width:720px; 
-}
-
-.graph-row.skew-right .js-plotly-plot{ 
-  max-width:660px; 
-}
-
+/* === TEXTE DE TRANSITION === */
 .transition-block{
   max-width:1500px;
   margin:2rem auto;
-  font-size:1.05rem;
+  font-size:1.1rem;
   line-height:1.7;
   color:#FFFFFF;
 }
@@ -209,23 +251,23 @@ section h3{
   margin:0; 
 }
 
-@media (max-width:900px){
-  .graph-row,.graph-row.skew-left,.graph-row.skew-right{
-    grid-template-columns:1fr;
-    gap:1.25rem;
-  }
-
-  .graph-row.skew-left .panel-text,.graph-row.skew-right .panel{
-    margin-top:0; 
-  }
-
-  .graph-row.skew-left  .js-plotly-plot,.graph-row.skew-right .js-plotly-plot{ 
-    max-width:800px; 
-  }
-  .panel-text{ 
-    text-align:center; 
-  }
+#video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  width: 100%;
 }
+
+#video iframe {
+  display: block;
+  width: 80%;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
+  border: 4px solid #515A5A;
+  border-radius: 10px;
+}
+
 
 #mentions-content[hidden]{ 
   display:none !important; 
@@ -252,4 +294,3 @@ footer{
   text-align:center;
   padding:1rem;
 }
-
