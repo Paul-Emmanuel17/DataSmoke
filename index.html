@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 </head>
@@ -15,7 +16,7 @@
     <div class="head1-inner">
       <div class="brand">
         <h1>Data Smoke</h1>
-        <h2>Tabac et Cigarette électronique en France</h2>
+        <h2>Usage du Tabac et Cigarette électronique en France</h2>
       </div>
       <p class="mission">
         Ce site a pour mission de sensibiliser à l’impact du tabagisme et du vapotage en France,
@@ -25,7 +26,7 @@
       <nav aria-label="Navigation principale">
         <ul>
           <li><a href="#contexte">Contexte</a></li>
-          <li><a href="#visualisations">Visualisations</a></li>
+          <li><a href="#donnees">Données</a></li>
           <li><a href="#mentions">Mentions</a></li>
         </ul>
       </nav>
@@ -43,21 +44,61 @@
       </p>
     </section>
 
-    <section id="visualisations">
-      <h3>Visualisations</h3>
-      <div class="graph">
-      <div class="panel">
-        <h4 class="panel-title">Évolution 2017–2023 — usage quotidien</h4>
-        <div id="chart-evolution" class="chart-evolution"></div>
+    <section id="donnees">
+      <h3>Données</h3>
+
+      <div class="graph-row skew-left">
+        <div class="panel fade-in">
+          <h4 class="panel-title">Évolution 2017–2023 — usage quotidien</h4>
+          <div id="chart-evolution" class="chart-evolution"></div>
+        </div>
+        <div class="panel-text fade-in">
+          <h4>Évolution du tabagisme et du vapotage</h4>
+          <p>
+            En France, la consommation quotidienne de tabac diminue depuis plusieurs années, 
+            passant de près de 27 % des adultes en 2017 à un peu plus de 23 % en 2023.
+            On note toutefois une légère hausse en 2020, probablement liée au stress et au confinement 
+            durant la crise du Covid-19.
+          </p>
+          <p>
+            En parallèle, la cigarette électronique s’est imposée comme une alternative,
+            avec une progression constante du vapotage quotidien, atteignant plus de 6 % en 2023.
+            Cette évolution traduit un changement des comportements, où le vapotage remplace peu à peu le tabac traditionnel.
+          </p>
+        </div>
       </div>
 
-      <div class="panel">
-        <h4 class="panel-title">2023 par âge — usage quotidien</h4>
-        <div id="chart-age" class="chart-age"></div>
+      <div class="transition-block fade-in">
+        <p>
+          Si la baisse du tabagisme marque un progrès majeur de santé publique, 
+          elle s’accompagne d’un phénomène à double tranchant : 
+          l’essor du vapotage, notamment chez les jeunes.  
+          Derrière la réduction du nombre de fumeurs se cache une transformation des modes de consommation, 
+          souvent perçue comme plus “saine”, mais qui entretient une dépendance persistante à la nicotine.
+        </p>
       </div>
+
+      <div class="graph-row skew-right">
+        <div class="panel-text fade-in">
+          <h4>Usage selon l’âge</h4>
+          <p>
+            Les jeunes adultes (18–24 ans) se tournent de plus en plus tôt vers la cigarette électronique,
+            souvent perçue comme moins nocive ou plus “moderne”.  
+            Cette banalisation du vapotage inquiète, car elle peut entretenir la dépendance à la nicotine
+            dès le plus jeune âge.
+          </p>
+          <p>
+            À l’inverse, le tabac reste davantage présent chez les 25–44 ans, mais diminue progressivement 
+            dans les tranches d’âge supérieures.  
+            Ces tendances rappellent l’importance de la prévention et du suivi dès l’adolescence.
+          </p>
+        </div>
+        <div class="panel fade-in">
+          <h4 class="panel-title">2023 par âge — usage quotidien</h4>
+          <div id="chart-age" class="chart-age"></div>
+        </div>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -81,6 +122,6 @@
     <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
   </footer>
 
-  <script src="script.js?v=1.6"></script>
+  <script src="script.js?v=2.1"></script>
 </body>
 </html>

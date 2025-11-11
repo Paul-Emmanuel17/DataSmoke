@@ -2,172 +2,254 @@
   box-sizing:border-box; 
 }
 
-html { 
+html{ 
   scroll-behavior:smooth; 
 }
 
-body {
+body{
   margin:0;
-  font-family:"Lora", Georgia, serif; 
+  font-family:"Lora", Georgia, serif;
   line-height:1.65;
+  background-color:#000000;
+  color:#FFFFFF;
 }
 
-h1, h2 {
-  text-align: center;
-}
-
-.brand h1 { 
-  font-family:"Bebas Neue",system-ui,sans-serif; 
-  font-weight:400; 
-  font-size:clamp(2.2rem,6vw,4rem); 
-  margin:0; 
-  color:#000000; 
-  text-transform:uppercase; 
-}
-
-.brand h2 { 
-  font-family:"Lora",serif; 
-  margin:0; 
-  color:#000000; 
-  font-weight:600; 
-  font-size:clamp(1.05rem,2.2vw,1.25rem); 
-}
-
-.mission { 
-  max-width:860px; 
-  margin:.75rem auto 0; 
-  color:#000000; 
-  opacity:.95; 
+h1,h2{ 
   text-align:center; 
 }
 
-nav ul { 
-  list-style:none; 
-  display:flex; 
-  gap:.6rem; 
-  flex-wrap:wrap; 
-  justify-content:center; 
-  margin:1rem 0 0; 
-  padding:0; 
+.brand h1{
+  font-family:"Limelight",sans-serif;
+  font-weight:500;
+  font-size:5.5rem;
+  margin:0;
+  color:#515A5A;
+  text-transform:uppercase;
 }
 
-nav a { 
-  display:inline-block; 
-  background:#fff; 
-  border:2px solid #000000; 
-  padding:.45rem .8rem; 
-  border-radius:999px; 
-  text-decoration:none; 
-  font-weight:600; 
+.brand h2{
+  font-family:"Lora",serif;
+  margin:0;
+  color:#FFFFFF;
+  font-weight:600;
+  font-size:clamp(1.05rem,2.2vw,1.25rem);
 }
 
-nav a:hover { 
-  background:transparent; 
-  color:#000000; 
+h3{
+  font-size:2.5rem;
+  margin-bottom:1.5rem;
 }
 
-main{ 
-  max-width:980px;
-  margin:2.2rem auto; 
-  padding:0 1rem; 
+.mission{
+  max-width:860px;
+  margin:.75rem auto 0;
+  color:#FFFFFF;
+  opacity:.95;
+  text-align:center;
 }
 
-section { 
-  margin-bottom:2.4rem; 
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:1rem 0 0;
+  padding:0;
 }
 
-section h3 { 
-  font-family:"Bebas Neue",system-ui,sans-serif; 
-  letter-spacing:.6px; 
-  text-transform:uppercase; 
-  color:var(--prussian); 
-  margin:.2rem 0 .4rem; 
-  font-size:1.6rem; 
+nav a{
+  display:inline-block;
+  background:#000000;
+  border:2px solid #515A5A;
+  color:#515A5A;
+  padding:.45rem .8rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-.panel {
-  border:6px double var(--rouge); 
+nav a:hover{
+  background:transparent;
+  color:#9C2007;
+}
+
+main{
+  max-width:1500px;
+  margin:2.2rem auto;
+  padding:0 1rem;
+}
+
+section{
+  margin-bottom:2.4rem;
+  margin-inline: 50px;
+}
+
+section h3{
+  font-family:"Bebas Neue",system-ui,sans-serif;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color:#FFFFFF;
+  margin:.2rem 0 .4rem;
+}
+
+.panel{
+  flex:1 1 50%;
+  min-width:0;
+  border:6px double var(--rouge);
   border-radius:10px;
-  padding:20px; 
-  outline:1px solid var(--border);
-}
-.panel-title { 
-  margin:0 0 .8rem; 
-  color:var(--rouge); 
-  text-align:center; 
-  font-family:'Bebas Neue',system-ui,sans-serif; 
-  letter-spacing:.6px; 
+  padding:20px;
+  background:#000;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
-#mentions-content[hidden] { 
+.panel-title{
+  margin:0 0 .8rem;
+  color:var(--rouge);
+  text-align:center;
+  font-family:'Bebas Neue',system-ui,sans-serif;
+  letter-spacing:.6px;
+  font-size: 1.5rem;
+}
+
+.panel-text{
+  flex:1 1 50%;
+  min-width:0;
+  color:#FFFFFF;
+  line-height:1.7;
+  font-size:1.05rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.panel-text h4{
+  font-family:"Bebas Neue",system-ui,sans-serif;
+  color:#515A5A;
+  letter-spacing:0.5px;
+  font-size:1.5rem;
+  margin-top:0;
+  margin-bottom:0.75rem;
+}
+
+.chart-evolution,.chart-age{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.chart-evolution .js-plotly-plot,.chart-age .js-plotly-plot{
+  width:100% !important;
+  max-width:700px;
+  height:420px !important;
+  margin:0 !important;
+  display:block !important;
+}
+
+.fade-in{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.graph-row{
+  display:grid;
+  grid-template-columns: 3fr 2fr;
+  gap:2rem;
+  align-items:stretch;
+  margin-bottom:3rem;
+}
+
+.graph-row.skew-left{
+  grid-template-columns: 3fr 2fr;
+}
+
+.graph-row.skew-left .panel-text{
+  margin-top:.6rem;
+}
+
+.graph-row.skew-right{
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.graph-row.skew-right .panel-text{ 
+  grid-column:1; 
+}
+
+.graph-row.skew-right .panel{ 
+  grid-column:2; margin-top:.9rem; 
+}
+
+.graph-row.skew-left  .js-plotly-plot{ 
+  max-width:720px; 
+}
+
+.graph-row.skew-right .js-plotly-plot{ 
+  max-width:660px; 
+}
+
+.transition-block{
+  max-width:1500px;
+  margin:2rem auto;
+  font-size:1.05rem;
+  line-height:1.7;
+  color:#FFFFFF;
+}
+
+.transition-block p{ 
+  margin:0; 
+}
+
+@media (max-width:900px){
+  .graph-row,.graph-row.skew-left,.graph-row.skew-right{
+    grid-template-columns:1fr;
+    gap:1.25rem;
+  }
+
+  .graph-row.skew-left .panel-text,.graph-row.skew-right .panel{
+    margin-top:0; 
+  }
+
+  .graph-row.skew-left  .js-plotly-plot,.graph-row.skew-right .js-plotly-plot{ 
+    max-width:800px; 
+  }
+  .panel-text{ 
+    text-align:center; 
+  }
+}
+
+#mentions-content[hidden]{ 
   display:none !important; 
 }
 
-.buttonMention {
-  appearance:none; 
-  background:none; 
-  border:none; 
-  padding:0; 
+.buttonMention{
+  color:#FFFFFF;
+  appearance:none;
+  background:none;
+  border:none;
+  padding:0;
   font:inherit;
-  cursor:pointer; 
-  position:relative; 
-  text-decoration:none; 
+  cursor:pointer;
+  text-decoration:none;
   transition:color .25s ease;
 }
 
-footer {
-  color:#000000; 
-  text-align:center; 
-  padding:1rem; 
+.buttonMention:hover{
+  color:#9C2007;
 }
 
-#chart-evolution,
-#chart-age {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+footer{
+  color:#FFFFFF;
+  text-align:center;
+  padding:1rem;
 }
 
-/* Conteneur Plotly */
-#chart-evolution .js-plotly-plot,
-#chart-age .js-plotly-plot {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 50vw !important;
-  max-width: 900px;
-  min-width: 320px;
-  height: 420px !important;
-  margin: 0 auto !important;
-}
-
-/* Forcer le centrage des couches internes Plotly */
-#chart-evolution .js-plotly-plot > div,
-#chart-age .js-plotly-plot > div,
-#chart-evolution .plot-container,
-#chart-age .plot-container {
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-#chart-evolution svg,
-#chart-age svg {
-  display: block;
-  margin: 0 auto;
-}
-
-#chart-evolution, #chart-age {
-  display:block;
-  margin:0 auto;   /* le JS fixe la width exacte */
-}
-
-/* Responsive mobile */
-@media (max-width:768px){
-  #chart-evolution .js-plotly-plot,
-  #chart-age .js-plotly-plot {
-    width:90vw !important;
-  }
-}
