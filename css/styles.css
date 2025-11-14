@@ -289,8 +289,306 @@ section h3{
   color:#9C2007;
 }
 
-footer{
-  color:#FFFFFF;
-  text-align:center;
-  padding:1rem;
+/* ===== FOOTER & MENTIONS LÉGALES ===== */
+
+footer {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+  background: linear-gradient(to bottom, #0a0a0a, #000000);
+}
+
+/* Bouton toggle des mentions */
+#toggle-mentions {
+  color: #FFFFFF;
+  appearance: none;
+  background: none;
+  border: 2px solid #515A5A;
+  padding: 0.8rem 2rem;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#toggle-mentions:hover {
+  color: #9C2007;
+  border-color: #9C2007;
+  transform: translateY(-2px);
+}
+
+/* Conteneur des mentions légales */
+#mentions-content {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  text-align: left;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#mentions-content[hidden] {
+  display: none !important;
+}
+
+/* Titre principal */
+#mentions-content > h4:first-child {
+  font-family: "Limelight", sans-serif;
+  font-size: 2.2rem;
+  color: #9C2007;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #333;
+}
+
+/* Sections principales */
+#mentions-content h4 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.8rem;
+  color: #515A5A;
+  margin: 2rem 0 1rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+#mentions-content h4:first-of-type {
+  margin-top: 0;
+}
+
+/* Sous-sections */
+#mentions-content h5 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.3rem;
+  color: #9C2007;
+  margin: 1.5rem 0 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphes */
+#mentions-content p {
+  margin: 0.8rem 0;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #DDD;
+}
+
+/* Listes */
+#mentions-content ul {
+  margin: 0.8rem 0 1.2rem 1.5rem;
+  padding-left: 1rem;
+}
+
+#mentions-content li {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #CCC;
+}
+
+/* Liens */
+#mentions-content a {
+  color: #9C2007;
+  text-decoration: none;
+  border-bottom: 1px dashed #9C2007;
+  transition: all 0.3s ease;
+}
+
+#mentions-content a:hover {
+  color: #FFFFFF;
+  border-bottom-style: solid;
+}
+
+/* Note importante */
+.note-importante {
+  margin-top: 2rem !important;
+  padding: 1.2rem;
+  background: rgba(156, 32, 7, 0.1);
+  border-left: 4px solid #9C2007;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+/* Copyright final */
+footer > p:last-child {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  opacity: 0.7;
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  #toggle-mentions {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #mentions-content {
+    margin: 1.5rem auto 0;
+    padding: 1.5rem;
+  }
+
+  #mentions-content > h4:first-child {
+    font-size: 1.8rem;
+  }
+
+  #mentions-content h4 {
+    font-size: 1.5rem;
+  }
+
+  #mentions-content h5 {
+    font-size: 1.1rem;
+  }
+
+  #mentions-content p,
+  #mentions-content li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #mentions-content {
+    padding: 1rem;
+  }
+
+  #mentions-content ul {
+    margin-left: 1rem;
+  }
+}
+
+
+/* ===== CARTES COMPARATIVES ===== */
+#map-section {
+  margin-top: 4rem;
+}
+
+.map-comparator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.map-wrapper {
+  background: #000;
+  border: 6px double #666; /* CONTOUR GRIS */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.map-controls {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.year-select {
+  background: #000;
+  border: 2px solid #666;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.year-select:focus {
+  outline: none;
+  border-color: var(--rouge);
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.toggle-btn {
+  background: #000;
+  border: 2px solid #666; /* BORDURE GRIS */
+  color: #999;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: transparent;
+  color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.toggle-btn:hover:not(.active) {
+  border-color: #999;
+  color: #CCC;
+}
+
+.map__image svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  padding: 0.7rem 1.2rem;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid var(--rouge);
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+  font-family: "Lora", serif;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Régions SVG */
+.region {
+  stroke: #555; /* CONTOUR GRIS */
+  stroke-width: 1;
+  cursor: pointer;
+  transition: stroke-width 0.2s ease, stroke 0.2s ease, fill 0.4s ease;
+}
+
+.region:hover {
+  stroke-width: 2;
+  stroke: var(--rouge);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .map-comparator {
+    grid-template-columns: 1fr;
+  }
+  
+  .toggle-buttons {
+    flex-wrap: wrap;
+  }
 }

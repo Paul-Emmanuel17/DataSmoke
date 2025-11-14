@@ -4,5 +4,36 @@
   "ecig":   [2.7, 3.8, 4.4, 4.3, 5.0, 5.5, 6.1],
   "ages":   ["18–24", "25–34", "35–44", "45–54", "55–64", "65–75"],
   "tabacQ": [23.4, 29.3, 29.5, 24.8, 21.2, 11.1],
-  "ecigQ":  [7.1, 8.7, 7.6, 7.0, 4.7, 2.0]
+  "ecigQ":  [7.1, 8.7, 7.6, 7.0, 4.7, 2.0],
+
+  "2021": {
+    "Île-de-France": { "tabac": 22.4, "vape": 4.2 },
+    "Hauts-de-France": { "tabac": 26.4, "vape": 5.0 },
+    "Normandie": { "tabac": 25.3, "vape": 5.3 },
+    "Bretagne": { "tabac": 25.5, "vape": 8.5 },
+    "Grand-Est": { "tabac": 26.8, "vape": 4.4 },
+    "Pays-de-la-Loire": { "tabac": 22.4, "vape": 6.2 },
+    "Centre-Val-de-Loire": { "tabac": 21.7, "vape": 6.3 },
+    "Bourgogne-Franche-Comté": { "tabac": 26.7, "vape": 3.1 },
+    "Nouvelle-Aquitaine": { "tabac": 25.3, "vape": 5.0 },
+    "Auvergne-Rhône-Alpes": { "tabac": 24.9, "vape": 4.9 },
+    "Occitanie": { "tabac": 28.5, "vape": 5.1 },
+    "Provence-Alpes-Côte d'Azur": { "tabac": 29.1, "vape": 5.4 },
+    "Corse": { "tabac": null, "vape": null }
+  },
+  "2023": {
+    "Île-de-France": { "tabac": 19.6, "vape": 5.5 },
+    "Hauts-de-France": { "tabac": 23.9, "vape": 5.9 },
+    "Normandie": { "tabac": 23.1, "vape": 8.1 },
+    "Bretagne": { "tabac": 19.5, "vape": 8.5 },
+    "Grand-Est": { "tabac": 24.2, "vape": 5.2 },
+    "Pays-de-la-Loire": { "tabac": 23.0, "vape": 6.5 },
+    "Centre-Val-de-Loire": { "tabac": 25.5, "vape": 5.8 },
+    "Bourgogne-Franche-Comté": { "tabac": 26.8, "vape": 5.3 },
+    "Nouvelle-Aquitaine": { "tabac": 23.9, "vape": 7.2 },
+    "Auvergne-Rhône-Alpes": { "tabac": 23.9, "vape": 5.1 },
+    "Occitanie": { "tabac": 26.0, "vape": 5.1 },
+    "Provence-Alpes-Côte d'Azur": { "tabac": 26.5, "vape": 6.9 },
+    "Corse": { "tabac": null, "vape": null }
+  }
 }

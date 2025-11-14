@@ -102,6 +102,39 @@
           <div id="chart-age" class="chart-age"></div>
         </div>
       </div>
+
+      <!-- SECTION CARTES -->
+      <section id="map-section">
+        <h3>Carte interactive des régions</h3>
+        
+        <!-- Carte 2021 -->
+        <div class="map-wrapper">
+          <div class="map-controls">
+            <h4>Données 2021</h4>
+            <div class="toggle-buttons">
+              <button class="toggle-btn active" data-map="map2021" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="map2021" data-mode="vape">Cigarette électronique</button>
+            </div>
+          </div>
+          <div class="map-container" id="map2021">
+            <div class="map__image"></div>
+          </div>
+        </div>
+
+        <!-- Carte 2023 -->
+        <div class="map-wrapper">
+          <div class="map-controls">
+            <h4>Données 2023</h4>
+            <div class="toggle-buttons">
+              <button class="toggle-btn active" data-map="map2023" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="map2023" data-mode="vape">Cigarette électronique</button>
+            </div>
+          </div>
+          <div class="map-container" id="map2023">
+            <div class="map__image"></div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="video">
@@ -116,20 +149,102 @@
       </h3>
 
       <div id="mentions-content" hidden>
-        <p>
-          Ce site est un projet académique réalisé dans le cadre de la SAÉ 3.03 “Concevoir des visualisations de données”.
-          Il ne collecte aucune donnée personnelle.
-        </p>
-        <p>
-          Sources : Douanes (Open Data), OFDT, Santé publique France.<br>
-          Besoin d’aide pour arrêter de fumer ? Consultez
-          <a href="https://www.tabac-info-service.fr/" target="_blank" rel="noopener">Tabac Info Service</a>.
-        </p>
+        <h4>Mentions Légales - Data Smoke</h4>
+        
+        <h4>Éditeur du site</h4>
+        <p>Ce site est réalisé par Paul-Emmanuel CESAR et Yan BLEU CISSOKO, étudiants en 2ème année du département MMI (Métiers du Multimédia et de l'Internet) de l'IUT de Champs-sur-Marne.</p>
+        <p>Projet réalisé dans le cadre de la SAÉ 3.03 « Concevoir des visualisations de données » du BUT MMI.</p>
+        <p><strong>Contacts :</strong></p>
+        <ul>
+          <li>yan.bleu-cissoko@etu.univ-eiffel.fr</li>
+          <li>paulemmanuel.cesar@etu.univ-eiffel.fr</li>
+        </ul>
+
+        <h4>Hébergement</h4>
+        <p><strong>Hébergeur :</strong> O2switch<br>
+        Site : <a href="https://www.o2switch.fr/" target="_blank" rel="noopener">https://www.o2switch.fr/</a></p>
+        <p>L'hébergement a été rendu possible grâce aux services de l'IUT de Champs-sur-Marne.<br>
+        Adresse : 2 Rue Albert Einstein, 77420 Champs-sur-Marne</p>
+
+        <h4>Propriété intellectuelle</h4>
+        
+        <h5>Code et design</h5>
+        <p>Ce site constitue un projet pédagogique. L'ensemble du code (HTML, CSS, JavaScript) ainsi que le design graphique ont été réalisés par Paul-Emmanuel CESAR et Yan BLEU CISSOKO.</p>
+        <p>Chaque aspect du projet (conception visuelle, développement front-end, intégration des données, tests) a été distribué de manière égale entre les deux collaborateurs.</p>
+
+        <h5>Contenu éditorial</h5>
+        <p>Les textes explicatifs, analyses et commentaires ont été rédigés collectivement par les deux étudiants à des fins d'apprentissage et de sensibilisation. Les sources des données sont systématiquement mentionnées.</p>
+
+        <h5>Données utilisées</h5>
+        <p>Les statistiques affichées proviennent de sources publiques et sont utilisées exclusivement à des fins éducatives :</p>
+        <ul>
+          <li>OFDT (Observatoire français des drogues et des toxicomanies)</li>
+          <li>Santé publique France</li>
+          <li>Douanes françaises (Open Data)</li>
+        </ul>
+        <p>Ces données sont librement accessibles et réutilisables dans le cadre de leur licence respective. Leur représentation graphique et leur analyse sont le fruit du travail personnel des étudiants.</p>
+
+        <h4>Données à caractère personnel</h4>
+        <p>Aucune donnée personnelle n'est collectée sur ce site.</p>
+        <p>Aucun cookie de suivi, traceur ou système analytique n'est déployé.</p>
+        <p>Le site respecte le Règlement Général sur la Protection des Données (RGPD).</p>
+
+        <h4>Crédits et ressources</h4>
+        
+        <h5>Images</h5>
+        <p>Bannière principale (Cigarette.jpeg) : <a href="https://ecomegot.com/filtres-a-cigarette-pollution-majeure/" target="_blank" rel="noopener">https://ecomegot.com/filtres-a-cigarette-pollution-majeure/</a></p>
+        <p>Carte SVG (france2016Low.svg) : carte vectorielle de la France métropolitaine (source libre, adaptée par les étudiants) <a href="https://www.amcharts.com/svg-maps/?map=france2016" target="_blank" rel="noopener">https://www.amcharts.com/svg-maps/?map=france2016</a></p>
+
+        <h5>Vidéo</h5>
+        <p>Science Trash - <a href="https://youtu.be/mgE0m1U5mYs" target="_blank" rel="noopener">https://youtu.be/mgE0m1U5mYs</a></p>
+
+        <h5>Bibliothèques et ressources externes</h5>
+        <p>Plotly.js v2.30.0 (CDN) : bibliothèque de visualisation de données sous licence MIT</p>
+        <p>Polices Google Fonts :</p>
+        <ul>
+          <li>Limelight (titre principal) sous licence Open Font License</li>
+          <li>Bebas Neue (titres de section) sous licence Open Font License</li>
+          <li>Lora (texte corps) sous licence Open Font License</li>
+        </ul>
+
+        <h5>Technologies employées</h5>
+        <p>L'architecture du site repose sur :</p>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Visualisations interactives via Plotly.js</li>
+          <li>Aucun framework backend (projet statique)</li>
+        </ul>
+
+        <h5>Utilisation de l'IA</h5>
+        <p>Dans le cadre de ce projet pédagogique, l'intelligence artificielle (IA) a été utilisée comme outil d'assistance et de compréhension, notamment pour :</p>
+        <ul>
+          <li>Comprendre certaines fonctionnalités avancées de Plotly.js</li>
+          <li>Explorer des approches de visualisation cartographique</li>
+          <li>Optimiser des fonctions JavaScript complexes</li>
+        </ul>
+        <p>Cependant, l'utilisation de l'IA n'a jamais été passive. Chaque proposition générée a été analysée, comprise, adaptée et intégrée manuellement par Paul-Emmanuel CESAR et Yan BLEU CISSOKO. Les deux étudiants ont pris le temps de comprendre le fonctionnement de chaque fonction avant de l'implémenter, afin de garantir une maîtrise complète du code et d'éviter toute dépendance.</p>
+        <p>Le design, la structure, l'analyse des données et les choix éditoriaux sont entièrement le fruit du travail personnel commun des deux collaborateurs.</p>
+
+        <h4>Droit d'auteur</h4>
+        <p>© 2025 Paul-Emmanuel CESAR et Yan BLEU CISSOKO - Projet DataViz (SAÉ 3.03 MMI Champs-sur-Marne)</p>
+        <p>Tous droits réservés dans le cadre de l'usage pédagogique.</p>
+
+        <h4>Dernière mise à jour</h4>
+        <p>Novembre 2025</p>
+
+        <p class="note-importante"><strong>Note importante :</strong> Ce site n'a aucun but commercial et ne représente pas une organisation officielle. Il a été créé dans un objectif d'apprentissage et de sensibilisation à la cause de santé publique.</p>
       </div>
     </section>
     <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
   </footer>
 
+  <!-- Tooltip -->
+  <div id="tooltip"></div>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="carte.js"></script>
 </body>
 </html>
