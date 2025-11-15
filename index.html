@@ -13,27 +13,28 @@
 </head>
 <body>
   <header class="head1" role="banner">
-    <div class="head1-inner">
-      <div class="brand">
-        <h1>Data Smoke</h1>
+    <div class="background">
+      <div class="hero-content">
+        <h1>DATASMOKE</h1>
         <h2>Usage du Tabac et Cigarette électronique en France</h2>
+
+        <p class="mission">
+          Ce site a pour mission de sensibiliser à l’impact du tabagisme et du vapotage en France,
+          en rendant les données compréhensibles et accessibles à tous, pour encourager la prévention
+          et des choix de vie plus sains.
+        </p>
+        <nav aria-label="Navigation principale">
+          <ul>
+            <li><a href="#contexte">CONTEXTE</a></li>
+            <li><a href="#donnees">DONNÉES</a></li>
+            <li><a href="#map-section">CARTE DES RÉGIONS</a></li>
+            <li><a href="#video">VIDÉO</a></li>
+            <li><a href="#mentions">MENTIONS</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="banner">
-        <img src="img/Cigarette.jpeg" alt="Fumée de cigarette en gros plan illustrant le tabagisme" />
-      </div>
-      <p class="mission">
-        Ce site a pour mission de sensibiliser à l’impact du tabagisme et du vapotage en France,
-        en rendant les données compréhensibles et accessibles à tous, pour encourager la prévention
-        et des choix de vie plus sains.
-      </p>
-      <nav aria-label="Navigation principale">
-        <ul>
-          <li><a href="#contexte">Contexte</a></li>
-          <li><a href="#donnees">Données</a></li>
-          <li><a href="#video">Vidéo Explicative</a></li>
-          <li><a href="#mentions">Mentions</a></li>
-        </ul>
-      </nav>
+
+        <div class="scroll-down"></div>
     </div>
   </header>
 
@@ -102,6 +103,39 @@
           <div id="chart-age" class="chart-age"></div>
         </div>
       </div>
+
+      <!-- SECTION CARTES -->
+      <section id="map-section">
+        <h3>Carte interactive des régions</h3>
+        
+        <!-- Carte 2021 -->
+        <div class="map-wrapper">
+          <div class="map-controls">
+            <h4>Données 2021</h4>
+            <div class="toggle-buttons">
+              <button class="toggle-btn active" data-map="map2021" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="map2021" data-mode="vape">Cigarette électronique</button>
+            </div>
+          </div>
+          <div class="map-container" id="map2021">
+            <div class="map__image"></div>
+          </div>
+        </div>
+
+        <!-- Carte 2023 -->
+        <div class="map-wrapper">
+          <div class="map-controls">
+            <h4>Données 2023</h4>
+            <div class="toggle-buttons">
+              <button class="toggle-btn active" data-map="map2023" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="map2023" data-mode="vape">Cigarette électronique</button>
+            </div>
+          </div>
+          <div class="map-container" id="map2023">
+            <div class="map__image"></div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="video">
@@ -110,26 +144,134 @@
   </main>
 
   <footer>
-    <section id="mentions">
-      <h3>
-        <button id="toggle-mentions" class="buttonMention" type="button">Mentions</button>
-      </h3>
+  <section id="mentions">
+    <h3>
+      <button id="toggle-mentions" class="buttonMention" type="button">Mentions</button>
+    </h3>
 
-      <div id="mentions-content" hidden>
-        <p>
-          Ce site est un projet académique réalisé dans le cadre de la SAÉ 3.03 “Concevoir des visualisations de données”.
-          Il ne collecte aucune donnée personnelle.
-        </p>
-        <p>
-          Sources : Douanes (Open Data), OFDT, Santé publique France.<br>
-          Besoin d’aide pour arrêter de fumer ? Consultez
-          <a href="https://www.tabac-info-service.fr/" target="_blank" rel="noopener">Tabac Info Service</a>.
-        </p>
-      </div>
-    </section>
-    <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
-  </footer>
+    <div id="mentions-content" hidden>
+      
+      <!-- 1. ÉDITEUR -->
+      <h4>Mentions légales</h4>
+      <h4>Éditeur du site </h4>
+      <p><strong>Directeur de la publication :</strong> Gilles Roussel, président de l’Université Gustave Eiffel</p>
+      <p><strong>Établissement :</strong> Université Gustave Eiffel</p>
+      <p><strong>Adresse :</strong> 2 Rue Albert Einstein, 77420 Champs-sur-Marne, France</p>
+      <p><strong>SIRET :</strong> 130 026 123 00013</p>
+      
 
+      <!-- 2. DPO -->
+      <h4>Délégué à la Protection des Données (DPO)</h4>
+      <p><strong>Nom :</strong> Véronique JUGE</p>
+      <p><strong>Adresse physique :</strong> Université Gustave Eiffel, 5 boulevard Descartes, 77420 Champs-sur-Marne</p>
+      <p><strong>Email :</strong> <a href="mailto:protectiondesdonnees-dpo@univ-eiffel.fr">protectiondesdonnees-dpo@univ-eiffel.fr</a></p>
+
+      <!-- 3. DONNÉES PERSONNELLES -->
+      <h4>Données à caractère personnel</h4>
+      <p>Aucune donnée personnelle n'est collectée sur ce site.</p>
+      <p>Aucun cookie de suivi, traceur ou système analytique n'est déployé.</p>
+      <p>Le site respecte le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">Règlement Général sur la Protection des Données (RGPD)</a>.</p>
+  
+      <!-- 4. HÉBERGEUR -->
+      <h4>Hébergement</h4>
+      <p><strong>Hébergeur :</strong> O2switch</p>
+      <p><strong>Adresse :</strong> 222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France</p>
+      <p><strong>Site :</strong> <a href="https://www.o2switch.fr/" target="_blank" rel="noopener">https://www.o2switch.fr/</a></p>
+      <p>L'hébergement a été rendu possible grâce aux services de l'IUT de Champs-sur-Marne.</p>
+
+      <!-- 5. NOUS (CE QU'ON FAIT) -->
+      <h4>Propriété intellectuelle et nature du projet</h4>
+      <p><strong>Code et design :</strong> Ce site constitue un projet pédagogique. L'ensemble du code (HTML, CSS, JavaScript) ainsi que le design graphique ont été réalisés par Paul-Emmanuel CESAR et Yan BLEU CISSOKO.</p>
+      
+      <p><strong>Contenu éditorial :</strong> Les textes explicatifs, analyses et commentaires ont été rédigés collectivement par les deux étudiants à des fins d'apprentissage et de sensibilisation. Les sources des données sont systématiquement mentionnées.</p>
+
+      
+      <p><strong>Contacts des étudiants :</strong></p>
+      <ul>
+        <li><a href="mailto:yan.bleu-cissoko@etu.univ-eiffel.fr">yan.bleu-cissoko@etu.univ-eiffel.fr</a></li>
+        <li><a href="paulemmanuel.cesar@etu.univ-eiffel.fr">paulemmanuel.cesar@etu.univ-eiffel.fr</a></li>
+      </ul>
+      
+      <p class="note-importante"><strong>Note importante :</strong> Ce site n'a aucun but commercial et ne représente pas une organisation officielle. Il a été créé dans un objectif d'apprentissage et de sensibilisation à la cause de santé publique.</p>
+
+      <!-- 6. SOURCES -->
+      <h4>Sources et crédits</h4>
+      <h5>Données utilisées</h5>
+      <p>Les statistiques affichées proviennent de sources publiques et sont utilisées exclusivement à des fins éducatives :</p>
+      <ul>
+        <li>OFDT (Observatoire français des drogues et des toxicomanies)</li>
+        <li>Santé publique France</li>
+        <li>Douanes françaises (Open Data)</li>
+      </ul>
+      <p>Ces données sont librement accessibles et réutilisables dans le cadre de leur licence respective. Leur représentation graphique et leur analyse sont le fruit du travail personnel des étudiants.</p>
+
+      <h5>Images</h5>
+      <p>Bannière principale (Cigarette.jpeg) : <a href="https://ecomegot.com/filtres-a-cigarette-pollution-majeure/" target="_blank" rel="noopener">https://ecomegot.com/filtres-a-cigarette-pollution-majeure/</a></p>
+      <p>Carte SVG (france2016Low.svg) : carte vectorielle de la France métropolitaine <a href="https://www.amcharts.com/svg-maps/?map=france2016" target="_blank" rel="noopener">https://www.amcharts.com/svg-maps/?map=france2016</a></p>
+
+      <h5>Vidéo</h5>
+      <p>Science Trash - <a href="https://youtu.be/mgE0m1U5mYs" target="_blank" rel="noopener">https://youtu.be/mgE0m1U5mYs</a></p>
+
+      <h5>Bibliothèques et ressources externes</h5>
+      <p>Plotly.js v2.30.0 (CDN) : bibliothèque de visualisation de données sous licence MIT</p>
+      <p>Polices Google Fonts :</p>
+      <ul>
+        <li>Limelight (titre principal) sous licence Open Font License</li>
+        <li>Bebas Neue (titres de section) sous licence Open Font License</li>
+        <li>Lora (texte corps) sous licence Open Font License</li>
+      </ul>
+
+      <h5>Technologies employées</h5>
+      <p>L'architecture du site repose sur :</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Visualisations interactives via Plotly.js</li>
+      </ul>
+
+      <h5>Utilisation de l'IA</h5>
+      <p>Dans le cadre de ce projet pédagogique, l'intelligence artificielle (IA) a été utilisée comme outil d'assistance et de compréhension, notamment pour :</p>
+      <ul>
+        <li>Comprendre certaines fonctionnalités avancées de Plotly.js</li>
+        <li>Explorer des approches de visualisation cartographique</li>
+        <li>Optimiser des fonctions JavaScript complexes</li>
+      </ul>
+      <p>Cependant, l'utilisation de l'IA n'a jamais été passive. Chaque proposition générée a été analysée, comprise, adaptée et intégrée manuellement par Paul-Emmanuel CESAR et Yan BLEU CISSOKO. Les deux étudiants ont pris le temps de comprendre le fonctionnement de chaque fonction avant de l'implémenter, afin de garantir une maîtrise complète du code et d'éviter toute dépendance.</p>
+      <p>Le design, la structure, l'analyse des données et les choix éditoriaux sont entièrement le fruit du travail personnel commun des deux collaborateurs.</p>
+
+      <!-- 7. LOIS -->
+      <h4>Dispositions légales et réglementaires</h4>
+      <p><strong>Loi Évin :</strong> Conformément à la loi n°91-32 du 10 janvier 1991 (dite « loi Évin ») et au code de la santé publique, ce site ne contient aucune publicité en faveur du tabac ni incitation à la consommation de tabac ou de cigarettes électroniques. Les informations présentées ont un but strictement informatif et pédagogique.</p>
+      
+      <p><strong>En application de la loi Évine, les auteurs précisent que :</strong></p>
+      <ul>
+        <li>Le tabac est dangereux pour la santé et provoque de graves maladies (cancers, maladies cardiovasculaires, respiratoires, etc.)</li>
+        <li>La cigarette électronique contient de la nicotine, une substance hautement addictive, et ses effets à long terme ne sont pas encore complètement connus</li>
+        <li>Ce site n'incite en aucun cas à l'usage de ces produits</li>
+        <li>L'objectif est exclusivement de fournir des données factuelles pour sensibiliser aux risques et encourager la prévention</li>
+      </ul>
+      
+      <p class="note-importante"><strong>À l'attention des personnes souhaitant arrêter le tabac :</strong> Des ressources gratuites sont disponibles sur <a href="https://www.tabac-info-service.fr/" target="_blank" rel="noopener">Tabac Info Service</a> (39 89) ou auprès de votre médecin.</p>
+
+      <!-- DROIT D'AUTEUR -->
+      <h4>Droit d'auteur</h4>
+      <p>© 2025 Paul-Emmanuel CESAR et Yan BLEU CISSOKO - Projet DataViz (SAÉ 3.03 MMI Champs-sur-Marne)</p>
+      <p>Tous droits réservés dans le cadre de l'usage pédagogique.</p>
+
+      <h4>Dernière mise à jour</h4>
+      <p>Novembre 2025</p>
+    </div>
+  </section>
+  
+  <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
+</footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip"></div>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="carte.js"></script>
 </body>
 </html>
