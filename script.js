@@ -10,7 +10,7 @@ async function loadData(){
 
 const css=getComputedStyle(document.documentElement);
 const cBlanc  = css.getPropertyValue('--blanc').trim()  || '#FFFFFF';
-const cRouge     = css.getPropertyValue('--rouge').trim()     || '#701705';
+const cRouge     = css.getPropertyValue('--rouge').trim()     || '#C1121F';
 const cBleu = css.getPropertyValue('--bleu').trim() || '#006875';
 
 const config={ responsive:false, displaylogo:false };

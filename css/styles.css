@@ -558,7 +558,7 @@ section h3{
 }
 
 .buttonMention:hover{
-  color:#9C2007;
+  color:#C1121F;
 }
 
 
@@ -590,8 +590,8 @@ footer {
 }
 
 #toggle-mentions:hover {
-  color: #9C2007;
-  border-color: #9C2007;
+  color: #C1121F;
+  border-color: #C1121F;
   transform: translateY(-2px);
 }
 
@@ -619,7 +619,7 @@ footer {
 #mentions-content > h4:first-child {
   font-family: "Limelight", sans-serif;
   font-size: 2.2rem;
-  color: #9C2007;
+  color: #C1121F;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -644,7 +644,7 @@ footer {
 #mentions-content h5 {
   font-family: "Bebas Neue", system-ui, sans-serif;
   font-size: 1.3rem;
-  color: #9C2007;
+  color: #C1121F;
   margin: 1.5rem 0 0.8rem;
   letter-spacing: 0.5px;
 }
@@ -672,9 +672,9 @@ footer {
 
 /* Liens */
 #mentions-content a {
-  color: #9C2007;
+  color: #C1121F;
   text-decoration: none;
-  border-bottom: 1px dashed #9C2007;
+  border-bottom: 1px dashed #C1121F;
   transition: all 0.3s ease;
 }
 
@@ -688,7 +688,7 @@ footer {
   margin-top: 2rem !important;
   padding: 1.2rem;
   background: rgba(156, 32, 7, 0.1);
-  border-left: 4px solid #9C2007;
+  border-left: 4px solid #C1121F;
   border-radius: 5px;
   font-style: italic;
 }
