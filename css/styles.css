@@ -672,9 +672,9 @@ footer {
 
 /* Liens */
 #mentions-content a {
-  color: #C1121F;
+  color: #FF4F4F;
   text-decoration: none;
-  border-bottom: 1px dashed #C1121F;
+  border-bottom: 1px dashed #FF4F4F;
   transition: all 0.3s ease;
 }
 
