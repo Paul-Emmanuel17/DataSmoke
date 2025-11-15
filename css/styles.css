@@ -442,11 +442,30 @@ section h3{
   color:#9C2007;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== FOOTER & MENTIONS LÉGALES ===== */
+
+footer {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+  background: linear-gradient(to bottom, #0a0a0a, #000000);
+}
+
+/* Bouton toggle des mentions */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #toggle-mentions {
   color: #FFFFFF;
   appearance: none;
   background: none;
+<<<<<<< HEAD
   border: 2px solid #E5E5E5;
+=======
+  border: 2px solid #515A5A;
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
   padding: 0.8rem 2rem;
   font: inherit;
   cursor: pointer;
@@ -464,8 +483,14 @@ section h3{
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 #mentions-content {
   max-width:1200px;
+=======
+/* Conteneur des mentions légales */
+#mentions-content {
+  max-width: 1000px;
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
   margin: 2rem auto 0;
   text-align: left;
   background: #0a0a0a;
@@ -479,6 +504,10 @@ section h3{
   display: none !important;
 }
 
+<<<<<<< HEAD
+=======
+/* Titre principal */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #mentions-content > h4:first-child {
   font-family: "Limelight", sans-serif;
   font-size: 2.2rem;
@@ -490,10 +519,18 @@ section h3{
   border-bottom: 2px solid #333;
 }
 
+<<<<<<< HEAD
 #mentions-content h4 {
   font-family: "Bebas Neue", system-ui, sans-serif;
   font-size: 1.8rem;
   color: #E5E5E5;
+=======
+/* Sections principales */
+#mentions-content h4 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.8rem;
+  color: #515A5A;
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
   margin: 2rem 0 1rem;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -503,6 +540,10 @@ section h3{
   margin-top: 0;
 }
 
+<<<<<<< HEAD
+=======
+/* Sous-sections */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #mentions-content h5 {
   font-family: "Bebas Neue", system-ui, sans-serif;
   font-size: 1.3rem;
@@ -511,6 +552,10 @@ section h3{
   letter-spacing: 0.5px;
 }
 
+<<<<<<< HEAD
+=======
+/* Paragraphes */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #mentions-content p {
   margin: 0.8rem 0;
   line-height: 1.8;
@@ -518,6 +563,10 @@ section h3{
   color: #DDD;
 }
 
+<<<<<<< HEAD
+=======
+/* Listes */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #mentions-content ul {
   margin: 0.8rem 0 1.2rem 1.5rem;
   padding-left: 1rem;
@@ -530,6 +579,10 @@ section h3{
   color: #CCC;
 }
 
+<<<<<<< HEAD
+=======
+/* Liens */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 #mentions-content a {
   color: #9C2007;
   text-decoration: none;
@@ -542,6 +595,10 @@ section h3{
   border-bottom-style: solid;
 }
 
+<<<<<<< HEAD
+=======
+/* Note importante */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 .note-importante {
   margin-top: 2rem !important;
   padding: 1.2rem;
@@ -551,6 +608,10 @@ section h3{
   font-style: italic;
 }
 
+<<<<<<< HEAD
+=======
+/* Copyright final */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 footer > p:last-child {
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -558,6 +619,10 @@ footer > p:last-child {
   opacity: 0.7;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== RESPONSIVE FOOTER ===== */
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 
 @media (max-width: 768px) {
   footer {
@@ -604,6 +669,7 @@ footer > p:last-child {
   }
 }
 
+<<<<<<< HEAD
 footer {
   color: #FFFFFF;
   text-align: center;
@@ -611,4 +677,124 @@ footer {
   margin-top: 4rem;
   border-top: 1px solid #333;
   background: linear-gradient(to bottom, #0a0a0a, #000000);
+=======
+
+/* ===== CARTES COMPARATIVES ===== */
+#map-section {
+  margin-top: 4rem;
+}
+
+.map-comparator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.map-wrapper {
+  background: #000;
+  border: 6px double #666; /* CONTOUR GRIS */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.map-controls {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.year-select {
+  background: #000;
+  border: 2px solid #666;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.year-select:focus {
+  outline: none;
+  border-color: var(--rouge);
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.toggle-btn {
+  background: #000;
+  border: 2px solid #666; /* BORDURE GRIS */
+  color: #999;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: transparent;
+  color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.toggle-btn:hover:not(.active) {
+  border-color: #999;
+  color: #CCC;
+}
+
+.map__image svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  padding: 0.7rem 1.2rem;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid var(--rouge);
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+  font-family: "Lora", serif;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Régions SVG */
+.region {
+  stroke: #555; /* CONTOUR GRIS */
+  stroke-width: 1;
+  cursor: pointer;
+  transition: stroke-width 0.2s ease, stroke 0.2s ease, fill 0.4s ease;
+}
+
+.region:hover {
+  stroke-width: 2;
+  stroke: var(--rouge);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .map-comparator {
+    grid-template-columns: 1fr;
+  }
+  
+  .toggle-buttons {
+    flex-wrap: wrap;
+  }
+>>>>>>> 214ef904fb9e13eeb0ed9b421e24b7ee656502c9
 }
