@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="img/Logo-datasmoke.svg" type="image/svg+xml">
   <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 </head>
 <body>
@@ -106,37 +107,72 @@
 
       <!-- SECTION CARTES -->
       <section id="map-section">
-        <h3>Carte interactive des régions</h3>
-        
-        <!-- Carte 2021 -->
+        <h3>Cartes régionales</h3>
+        <h4>Taux d'usage quotidien par région de cigarettes/cigarettes électroniques (en %)</h4>
+        <p>Population 15-75 ans</p>
+
+      <div class="map-comparator">
+
+        <!-- ===== CARTE A ===== -->
         <div class="map-wrapper">
           <div class="map-controls">
-            <h4>Données 2021</h4>
+
+            <select class="year-select" data-map="mapA">
+              <option value="2014">2014</option>
+              <option value="2017">2017</option>
+              <option value="2021" selected>2021</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+
             <div class="toggle-buttons">
-              <button class="toggle-btn active" data-map="map2021" data-mode="tabac">Tabac</button>
-              <button class="toggle-btn" data-map="map2021" data-mode="vape">Cigarette électronique</button>
+              <button class="toggle-btn active" data-map="mapA" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="mapA" data-mode="vape">Cigarette électronique</button>
             </div>
           </div>
-          <div class="map-container" id="map2021">
-            <div class="map__image"></div>
+
+          <div id="mapA" class="map__image"></div>
+
+          <!-- Légende -->
+          <div class="legend-scale" style="display:flex; justify-content:center; margin-top:20px;">
+            <div><span class="legend-low"></span> Faible</div>
+            <div><span class="legend-mid"></span> Moyen</div>
+            <div><span class="legend-high"></span> Élevé</div>
           </div>
         </div>
 
-        <!-- Carte 2023 -->
+        <!-- ===== CARTE B ===== -->
         <div class="map-wrapper">
           <div class="map-controls">
-            <h4>Données 2023</h4>
+
+            <select class="year-select" data-map="mapB">
+              <option value="2014">2014</option>
+              <option value="2017">2017</option>
+              <option value="2021">2021</option>
+              <option value="2023">2023</option>
+              <option value="2024" selected>2024</option>
+            </select>
+
             <div class="toggle-buttons">
-              <button class="toggle-btn active" data-map="map2023" data-mode="tabac">Tabac</button>
-              <button class="toggle-btn" data-map="map2023" data-mode="vape">Cigarette électronique</button>
+              <button class="toggle-btn active" data-map="mapB" data-mode="tabac">Tabac</button>
+              <button class="toggle-btn" data-map="mapB" data-mode="vape">Cigarette électronique</button>
             </div>
           </div>
-          <div class="map-container" id="map2023">
-            <div class="map__image"></div>
+
+          <div id="mapB" class="map__image"></div>
+
+          <!-- Légende -->
+          <div class="legend-scale" style="display:flex; justify-content:center; margin-top:20px;">
+            <div><span class="legend-low"></span> Faible</div>
+            <div><span class="legend-mid"></span> Moyen</div>
+            <div><span class="legend-high"></span> Élevé</div>
           </div>
         </div>
-      </section>
+
+      </div>
     </section>
+
+    <div id="tooltip"></div>
 
     <section id="video">
       <iframe width="760" height="428" src="https://www.youtube.com/embed/mgE0m1U5mYs?si=mW-DtWFZ3KeRqoR-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -152,7 +188,7 @@
     <div id="mentions-content" hidden>
       
       <!-- 1. ÉDITEUR -->
-      <h4>Mentions légales</h4>
+      <h3>Mentions légales</h3>
       <h4>Éditeur du site </h4>
       <p><strong>Directeur de la publication :</strong> Gilles Roussel, président de l’Université Gustave Eiffel</p>
       <p><strong>Établissement :</strong> Université Gustave Eiffel</p>
@@ -230,6 +266,11 @@
         <li>Visualisations interactives via Plotly.js</li>
       </ul>
 
+      <h5>Ressources pédagogiques</h5>
+      <p>Le code de la carte interactive a été développé en m'appuyant sur la méthode présentée dans la vidéo 
+      "<a href="https://www.grafikart.fr/tutoriels/svg-carte-interactive-1293" target="_blank" rel="noopener">Carte interactive avec SVG</a>" 
+      de Grafikart.fr, adaptée et approfondie pour mes besoins spécifiques.</p>
+
       <h5>Utilisation de l'IA</h5>
       <p>Dans le cadre de ce projet pédagogique, l'intelligence artificielle (IA) a été utilisée comme outil d'assistance et de compréhension, notamment pour :</p>
       <ul>
@@ -266,9 +307,6 @@
   
   <p>© 2025 — Data Smoke | Projet DataViz (SAÉ 3.03)</p>
 </footer>
-
-  <!-- Tooltip -->
-  <div id="tooltip"></div>
 
   <!-- Scripts -->
   <script src="script.js"></script>

@@ -6,6 +6,37 @@
   "tabacQ": [23.4, 29.3, 29.5, 24.8, 21.2, 11.1],
   "ecigQ":  [7.1, 8.7, 7.6, 7.0, 4.7, 2.0],
 
+
+  "2014": {
+    "Île-de-France": { "tabac": 23.6, "vape": 4.9 },
+    "Hauts-de-France": { "tabac": 30.9, "vape": 5.7 },
+    "Normandie": { "tabac": 30.8, "vape": 6.1 },
+    "Bretagne": { "tabac": 29.1, "vape": 8.0 },
+    "Grand-Est": { "tabac": 31.3, "vape": 6.7 },
+    "Pays-de-la-Loire": { "tabac": 25.0, "vape": 4.1 },
+    "Centre-Val-de-Loire": { "tabac": 29.8, "vape": 5.4 },
+    "Bourgogne-Franche-Comté": { "tabac": 26.2, "vape": 5.7 },
+    "Nouvelle-Aquitaine": { "tabac": 29.9, "vape": 7.1 },
+    "Auvergne-Rhône-Alpes": { "tabac": 26.5, "vape": 5.8 },
+    "Occitanie": { "tabac": 30.4, "vape": 7.0 },
+    "Provence-Alpes-Côte d'Azur": { "tabac": 29.5, "vape": 5.9 },
+    "Corse": {}
+  },
+  "2017": {
+      "Île-de-France": { "tabac": 21.3},
+      "Hauts-de-France": { "tabac": 30.5},
+      "Normandie": { "tabac": 25.6},
+      "Bretagne": { "tabac": 26.5},
+      "Grand-Est": { "tabac": 30.1},
+      "Pays-de-la-Loire": { "tabac": 23.0},
+      "Centre-Val-de-Loire": { "tabac": 28.0},
+      "Bourgogne-Franche-Comté": { "tabac": 28.6},
+      "Nouvelle-Aquitaine": { "tabac": 28.1},
+      "Auvergne-Rhône-Alpes": { "tabac": 26.2},
+      "Occitanie": { "tabac": 30.3},
+      "Provence-Alpes-Côte d'Azur": { "tabac": 32.1},
+      "Corse": {}
+    },
   "2021": {
     "Île-de-France": { "tabac": 22.4, "vape": 4.2 },
     "Hauts-de-France": { "tabac": 26.4, "vape": 5.0 },
@@ -19,7 +50,7 @@
     "Auvergne-Rhône-Alpes": { "tabac": 24.9, "vape": 4.9 },
     "Occitanie": { "tabac": 28.5, "vape": 5.1 },
     "Provence-Alpes-Côte d'Azur": { "tabac": 29.1, "vape": 5.4 },
-    "Corse": { "tabac": null, "vape": null }
+    "Corse": {}
   },
   "2023": {
     "Île-de-France": { "tabac": 19.6, "vape": 5.5 },
@@ -34,6 +65,22 @@
     "Auvergne-Rhône-Alpes": { "tabac": 23.9, "vape": 5.1 },
     "Occitanie": { "tabac": 26.0, "vape": 5.1 },
     "Provence-Alpes-Côte d'Azur": { "tabac": 26.5, "vape": 6.9 },
-    "Corse": { "tabac": null, "vape": null }
+    "Corse": { }
+  },
+  
+  "2024": {
+    "Île-de-France": { "tabac": 14.6},
+    "Hauts-de-France": { "tabac": 18.7},
+    "Normandie": { "tabac": 16.6},
+    "Bretagne": { "tabac": 16.1},
+    "Grand-Est": { "tabac": 19.8},
+    "Pays-de-la-Loire": { "tabac": 17.4},
+    "Centre-Val-de-Loire": { "tabac": 16.5},
+    "Bourgogne-Franche-Comté": { "tabac": 19.2},
+    "Nouvelle-Aquitaine": { "tabac": 17.6},
+    "Auvergne-Rhône-Alpes": { "tabac": 16.0},
+    "Occitanie": { "tabac": 20.6},
+    "Provence-Alpes-Côte d'Azur": { "tabac": 20.9},
+    "Corse": {"tabac": 19.4}
   }
 }
