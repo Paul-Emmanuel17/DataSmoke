@@ -3,6 +3,7 @@
   margin: 0;
 }
 
+/* ===== PARAMÈTRES DE BASE ===== */
 html{ 
   scroll-behavior:smooth; 
 }
@@ -15,6 +16,7 @@ body{
   color:#FFFFFF;
 }
 
+/* ===== ENTÊTE AVEC L’IMAGE ===== */
 .background {
     position: relative;
     width: 100vw;
@@ -30,7 +32,6 @@ body{
     align-items: center;
     padding: 20px;
     text-align: center;
-
     overflow: hidden;
 }
 
@@ -68,8 +69,9 @@ body{
     margin-right: auto;
 }
 
+/* ===== TITRES ===== */
 h1 {
-    font-size: clamp(3rem, 10vw, 8rem); /* s’adapte entre mobile et grand écran */
+    font-size: clamp(3rem, 10vw, 8rem);
     letter-spacing: 4px;
     color: whitesmoke;
     font-family: "Limelight", sans-serif;
@@ -95,6 +97,7 @@ h2 {
     line-height: 1.6;
 }
 
+/* ===== NAVIGATION ===== */
 nav ul{
   list-style:none;
   display:flex;
@@ -126,6 +129,7 @@ nav a:hover{
   transform: translateY(-2px);
 }
 
+/* ===== ICÔNE FLECHE ===== */
 .scroll-down {
     position: absolute;
     bottom: 45px;
@@ -148,6 +152,7 @@ nav a:hover{
     100% { transform: translate(-50%, 0) rotate(-45deg); opacity: 0.6; }
 }
 
+/* ===== STRUCTURE GÉNÉRALE ===== */
 main{
   max-width:1400px;
   margin:2.2rem auto;
@@ -164,11 +169,11 @@ section h3{
   letter-spacing:.6px;
   text-transform:uppercase;
   color:#E5E5E5;
-  margin:.2rem 0 .4rem;
   font-size:2.5rem;
   margin-bottom:1.5rem;
 }
 
+/* ===== PANELS POUR LES GRAPHIQUES ===== */
 .panel{
   flex:1 1 50%;
   min-width:0;
@@ -185,15 +190,13 @@ section h3{
 .panel-title{
   margin:0 0 .8rem;
   text-align:center;
-  font-family:'Bebas Neue',system-ui,sans-serif;
-  letter-spacing:.6px;
+  font-family:'Bebas Neue';
   font-size: 1.5rem;
 }
 
 .panel-text{
   flex:1 1 50%;
   min-width:0;
-  color:#FFFFFF;
   line-height:1.7;
   font-size:1.1rem;
   display:flex;
@@ -202,7 +205,7 @@ section h3{
 }
 
 .panel-text h4{
-  font-family:"Bebas Neue",system-ui,sans-serif;
+  font-family:"Bebas Neue";
   color:#E5E5E5;
   letter-spacing:0.5px;
   font-size:2rem;
@@ -210,6 +213,7 @@ section h3{
   margin-bottom:0.75rem;
 }
 
+/* ===== GRAPHIQUES PLOTLY ===== */
 .chart-evolution,.chart-age{
   width:100%;
   height:100%;
@@ -218,7 +222,8 @@ section h3{
   align-items:center;
 }
 
-.chart-evolution .js-plotly-plot,.chart-age .js-plotly-plot{
+.chart-evolution .js-plotly-plot,
+.chart-age .js-plotly-plot{
   width:100% !important;
   max-width:700px;
   height:420px !important;
@@ -226,6 +231,7 @@ section h3{
   display:block !important;
 }
 
+/* ===== ANIMATION APPARITION ===== */
 .fade-in{
   opacity:0;
   transform:translateY(25px);
@@ -236,6 +242,7 @@ section h3{
   transform:translateY(0);
 }
 
+/* ===== DISPOSITION DES BLOCS GRAPHIQUES ===== */
 .graph-row{
   display: flex;
   flex-wrap: nowrap;
@@ -249,7 +256,6 @@ section h3{
 }
 .graph-row.skew-left .panel-text{
   flex-basis: 40%;
-  margin-top: .6rem;
 }
 
 .graph-row.skew-right .panel-text{
@@ -259,7 +265,6 @@ section h3{
 .graph-row.skew-right .panel{
   order: 2;
   flex-basis: 55%;
-  margin-top: .6rem;
 }
 
 @media (max-width: 900px){
@@ -269,7 +274,6 @@ section h3{
   }
   .graph-row .panel,
   .graph-row .panel-text{
-    order: initial;
     flex: 1 1 100%;
     max-width: 800px;
   }
@@ -278,252 +282,15 @@ section h3{
   }
 }
 
+/* ===== BLOC DE TRANSITION ===== */
 .transition-block{
   max-width:1500px;
   margin:2rem auto;
   font-size:1.1rem;
   line-height:1.7;
-  color:#FFFFFF;
 }
 
-.transition-block p{ 
-  margin:0; 
-}
-
-#map-section {
-  margin-top: 4rem;
-}
-
-.map-comparator {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.map-wrapper {
-  background: #000;
-  border: 6px double #666;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.map-controls {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.year-select {
-  background: #000;
-  border: 2px solid #666;
-  color: #FFF;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-family: "Lora", serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.year-select:focus {
-  outline: none;
-  border-color: var(--rouge);
-}
-
-.toggle-buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.toggle-btn {
-  background: #000;
-  border: 2px solid #666;
-  color: #999;
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-family: "Lora", serif;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.toggle-btn.active {
-  background: transparent;
-  color: var(--rouge);
-  border-color: var(--rouge);
-}
-
-.toggle-btn:hover:not(.active) {
-  border-color: #999;
-  color: #CCC;
-}
-
-.map__image svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#tooltip {
-  position: absolute;
-  padding: 0.7rem 1.2rem;
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid var(--rouge);
-  border-radius: 6px;
-  color: #FFFFFF;
-  font-size: 0.95rem;
-  pointer-events: none;
-  z-index: 1000;
-  display: none;
-  font-family: "Lora", serif;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-.region {
-  stroke: #555;
-  stroke-width: 1;
-  cursor: pointer;
-  transition: stroke-width 0.2s ease, stroke 0.2s ease, fill 0.4s ease;
-}
-
-.region:hover {
-  stroke-width: 2;
-  stroke: var(--rouge);
-}
-
-@media (max-width: 900px) {
-  .map-comparator {
-    grid-template-columns: 1fr;
-  }
-  
-  .toggle-buttons {
-    flex-wrap: wrap;
-  }
-}
-
-/* ===== CARTES COMPARATIVES ===== */
-#map-section {
-  margin-top: 4rem;
-}
-
-.map-comparator {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.map-wrapper {
-  background: #000;
-  border: 6px double #666; /* CONTOUR GRIS */
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.map-controls {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.year-select {
-  background: #000;
-  border: 2px solid #666;
-  color: #FFF;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-family: "Lora", serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.year-select:focus {
-  outline: none;
-  border-color: var(--rouge);
-}
-
-.toggle-buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.toggle-btn {
-  background: #000;
-  border: 2px solid #666; /* BORDURE GRIS */
-  color: #999;
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-family: "Lora", serif;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.toggle-btn.active {
-  background: transparent;
-  color: var(--rouge);
-  border-color: var(--rouge);
-}
-
-.toggle-btn:hover:not(.active) {
-  border-color: #999;
-  color: #CCC;
-}
-
-.map__image svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Tooltip */
-#tooltip {
-  position: absolute;
-  padding: 0.7rem 1.2rem;
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid var(--rouge);
-  border-radius: 6px;
-  color: #FFFFFF;
-  font-size: 0.95rem;
-  pointer-events: none;
-  z-index: 1000;
-  display: none;
-  font-family: "Lora", serif;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-/* Régions SVG */
-.region {
-  stroke: #555; /* CONTOUR GRIS */
-  stroke-width: 1;
-  cursor: pointer;
-  transition: stroke-width 0.2s ease, stroke 0.2s ease, fill 0.4s ease;
-}
-
-.region:hover {
-  stroke-width: 2;
-  stroke: var(--rouge);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .map-comparator {
-    grid-template-columns: 1fr;
-  }
-  
-  .toggle-buttons {
-    flex-wrap: wrap;
-  }
-}
-
+/* ===== VIDÉO ===== */
 #video {
   display: flex;
   justify-content: center;
@@ -533,7 +300,6 @@ section h3{
 }
 
 #video iframe {
-  display: block;
   width: 80%;
   max-width: 760px;
   aspect-ratio: 16 / 9;
@@ -541,30 +307,19 @@ section h3{
   border-radius: 10px;
 }
 
+/* ===== FOOTER / MENTIONS ===== */
 #mentions-content[hidden]{ 
   display:none !important; 
 }
 
 .buttonMention{
   color:#FFFFFF;
-  appearance:none;
   background:none;
   border:none;
-  padding:0;
-  font:inherit;
   cursor:pointer;
-  text-decoration:none;
-  transition:color .25s ease;
 }
-
-.buttonMention:hover{
-  color:#C1121F;
-}
-
-
 
 footer {
-  color: #FFFFFF;
   text-align: center;
   padding: 3rem 1rem 2rem;
   margin-top: 4rem;
@@ -574,35 +329,23 @@ footer {
 
 #toggle-mentions {
   color: #FFFFFF;
-  appearance: none;
   background: none;
-  border: 2px solid #E5E5E5;
   border: 2px solid #515A5A;
   padding: 0.8rem 2rem;
-  font: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
   border-radius: 999px;
   font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  cursor: pointer;
 }
-
 #toggle-mentions:hover {
   color: #C1121F;
   border-color: #C1121F;
   transform: translateY(-2px);
 }
 
-
-#mentions-content {
-  max-width:1200px;
-}
-
+/* ======== MENTIONS LONG TEXTE ======== */
 #mentions-content {
   max-width: 1000px;
-
   margin: 2rem auto 0;
   text-align: left;
   background: #0a0a0a;
@@ -612,44 +355,21 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-#mentions-content[hidden] {
-  display: none !important;
-}
-
-#mentions-content > h4:first-child {
-  font-family: "Limelight", sans-serif;
-  font-size: 2.2rem;
-  color: #C1121F;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #333;
-}
-
 #mentions-content h4 {
-  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-family: "Bebas Neue";
   font-size: 1.8rem;
   color: #E5E5E5;
   margin: 2rem 0 1rem;
-  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
-#mentions-content h4:first-of-type {
-  margin-top: 0;
-}
-
-/* Sous-sections */
 #mentions-content h5 {
-  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-family: "Bebas Neue";
   font-size: 1.3rem;
   color: #C1121F;
   margin: 1.5rem 0 0.8rem;
-  letter-spacing: 0.5px;
 }
 
-/* Paragraphes */
 #mentions-content p {
   margin: 0.8rem 0;
   line-height: 1.8;
@@ -657,30 +377,21 @@ footer {
   color: #DDD;
 }
 
-/* Listes */
 #mentions-content ul {
-  margin: 0.8rem 0 1.2rem 1.5rem;
+  margin-left: 1.5rem;
   padding-left: 1rem;
 }
 
 #mentions-content li {
   margin: 0.5rem 0;
   line-height: 1.7;
-  font-size: 0.95rem;
   color: #CCC;
 }
 
-/* Liens */
 #mentions-content a {
   color: #FF4F4F;
   text-decoration: none;
   border-bottom: 1px dashed #FF4F4F;
-  transition: all 0.3s ease;
-}
-
-#mentions-content a:hover {
-  color: #FFFFFF;
-  border-bottom-style: solid;
 }
 
 /* Note importante */
@@ -690,69 +401,123 @@ footer {
   background: rgba(156, 32, 7, 0.1);
   border-left: 4px solid #C1121F;
   border-radius: 5px;
-  font-style: italic;
 }
 
-/* Copyright final */
-footer > p:last-child {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
-  opacity: 0.7;
-}
+/* 
+   PARTIE CARTES (rangée ici à la fin) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 
-/* ===== RESPONSIVE FOOTER ===== */
-
-@media (max-width: 768px) {
-  footer {
-    padding: 2rem 1rem 1.5rem;
-  }
-
-  #toggle-mentions {
-    font-size: 1rem;
-    padding: 0.6rem 1.5rem;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  #mentions-content {
-    margin: 1.5rem auto 0;
-    padding: 1.5rem;
-  }
-
-  #mentions-content > h4:first-child {
-    font-size: 1.8rem;
-  }
-
-  #mentions-content h4 {
-    font-size: 1.5rem;
-  }
-
-  #mentions-content h5 {
-    font-size: 1.1rem;
-  }
-
-  #mentions-content p,
-  #mentions-content li {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #mentions-content {
-    padding: 1rem;
-  }
-
-  #mentions-content ul {
-    margin-left: 1rem;
-  }
-}
-
-footer {
-  color: #FFFFFF;
-  text-align: center;
-  padding: 3rem 1rem 2rem;
+/* Section principale des cartes */
+#map-section {
   margin-top: 4rem;
-  border-top: 1px solid #333;
-  background: linear-gradient(to bottom, #0a0a0a, #000000);
+}
+
+/* Comparateur de 2 cartes */
+.map-comparator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Une carte */
+.map-wrapper {
+  background: #000;
+  border: 6px double #666;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre et contrôles */
+.map-controls {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Boutons haut */
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Bouton tabac/vape */
+.toggle-btn {
+  background: #000;
+  border: 2px solid #666;
+  color: #999;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Lora";
+  font-size: 1rem;
+  transition: .3s;
+}
+
+/* Bouton actif */
+.toggle-btn.active {
+  background: transparent;
+  color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+/* Hover bouton (si non actif) */
+.toggle-btn:hover:not(.active) {
+  border-color: #999;
+  color: #CCC;
+}
+
+/* SVG */
+/* Force une zone d'affichage réelle pour la carte */
+.map__image {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* Corrige le SVG qui n'a pas de dimensions internes */
+.map__image svg {
+  width: 100%;
+  height: 100%;
+  min-height: 700px; /* taille verticale imposée */
+  display: block;
+  object-fit: contain; /* garde les proportions */
+  overflow: visible;
+}
+
+
+/* Tooltip (bulle info) */
+#tooltip {
+  position: absolute;
+  padding: 0.7rem 1.2rem;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid var(--rouge);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  display: none;
+  max-width: 280px;
+  text-align: center;
+}
+
+/* Style régions */
+.region {
+  stroke: #555;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: .2s;
+}
+
+/* Survol */
+.region:hover {
+  stroke-width: 2;
+  stroke: var(--rouge);
+}
+
+/* Responsive cartes */
+@media (max-width: 900px) {
+  .map-comparator {
+    grid-template-columns: 1fr;
+  }
 }
