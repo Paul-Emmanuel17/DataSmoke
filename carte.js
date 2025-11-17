@@ -1,16 +1,11 @@
-/*
-  Script pour gérer les cartes interactives.
-  Code réécrit proprement, commentaires simples.
-*/
-
 // Chemin vers la carte SVG
-const svgFile = "france2016Low.svg";
+const svgFile = "../france2016Low.svg";
 
 // Tooltip général
 const tooltip = document.getElementById("tooltip");
 
 // Données (tabac/vape)
-const mapDataUrl = "./data.json";
+const mapDataUrl = "../data.json";
 
 // États de chaque carte (année + mode)
 const mapStates = {
@@ -46,7 +41,6 @@ const palettes = {
 
 /*
   Correspondance entre les codes du SVG et les noms des régions
-  (le JSON utilise les noms exacts)
 */
 const regionMap = {
   "FR-IDF": "Île-de-France",
