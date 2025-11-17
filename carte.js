@@ -1,11 +1,11 @@
 // Fichier SVG
-const svgFile = "../france2016Low.svg";
+const svgFile = "france2016Low.svg";
 
 // Tooltip général
 const tooltip = document.getElementById("tooltip");
 
 // Données JSON
-const mapDataUrl = "../data.json";
+const mapDataUrl = "data.json";
 
 // Années disponibles (celles qui ont une carte)
 const availableYears = ["2014", "2017", "2021", "2023", "2024"];
