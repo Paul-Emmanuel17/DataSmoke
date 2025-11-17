@@ -1,4 +1,3 @@
-/* ===== PARAMÈTRES DE BASE ===== */
 html{ 
   scroll-behavior:smooth; 
 }
@@ -16,7 +15,6 @@ html, body {
 }
 
 
-/* ===== ENTÊTE AVEC L’IMAGE ===== */
 .background {
     position: relative;
     width: 100%;
@@ -69,7 +67,6 @@ html, body {
     margin-right: auto;
 }
 
-/* ===== TITRES ===== */
 h1 {
     font-size: clamp(3rem, 10vw, 8rem);
     letter-spacing: 4px;
@@ -97,7 +94,6 @@ h2 {
     line-height: 1.6;
 }
 
-/* ===== NAVIGATION ===== */
 nav ul{
   list-style:none;
   display:flex;
@@ -129,7 +125,6 @@ nav a:hover{
   transform: translateY(-2px);
 }
 
-/* ===== ICÔNE FLECHE ===== */
 .scroll-down {
     position: absolute;
     bottom: 45px;
@@ -152,7 +147,6 @@ nav a:hover{
     100% { transform: translate(-50%, 0) rotate(-45deg); opacity: 0.6; }
 }
 
-/* ===== STRUCTURE GÉNÉRALE ===== */
 main{
   max-width:1400px;
   margin:2.2rem auto;
@@ -173,7 +167,6 @@ section h3{
   margin-bottom:1.5rem;
 }
 
-/* ===== PANELS POUR LES GRAPHIQUES ===== */
 .panel{
   flex:1 1 50%;
   min-width:0;
@@ -213,7 +206,6 @@ section h3{
   margin-bottom:0.75rem;
 }
 
-/* ===== GRAPHIQUES PLOTLY ===== */
 .chart-evolution,.chart-age{
   width:100%;
   height:100%;
@@ -231,7 +223,6 @@ section h3{
   display:block !important;
 }
 
-/* ===== ANIMATION APPARITION ===== */
 .fade-in{
   opacity:0;
   transform:translateY(25px);
@@ -242,7 +233,6 @@ section h3{
   transform:translateY(0);
 }
 
-/* ===== DISPOSITION DES BLOCS GRAPHIQUES ===== */
 .graph-row{
   display: flex;
   flex-wrap: nowrap;
@@ -282,7 +272,6 @@ section h3{
   }
 }
 
-/* ===== BLOC DE TRANSITION ===== */
 .transition-block{
   max-width:1500px;
   margin:2rem auto;
@@ -290,7 +279,155 @@ section h3{
   line-height:1.7;
 }
 
-/* ===== VIDÉO ===== */
+#map-section {
+  margin-top: 4rem;
+}
+
+.map-comparator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.map-wrapper {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
+  background: #000000;
+  border: 6px double #666666;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-controls {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.toggle-btn {
+  background: #000;
+  border: 2px solid #666;
+  color: #999;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Lora";
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.toggle-btn.active {
+  background: transparent;
+  color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.toggle-btn:hover:not(.active) {
+  border-color: #999;
+  color: #CCC;
+}
+
+.map__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;   
+}
+
+.map__image svg {
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+  max-height: 650px;
+  object-fit: contain;  
+}
+
+#tooltip {
+  position: absolute;
+  padding: 0.7rem 1.2rem;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid var(--rouge);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  display: none;
+  max-width: 280px;
+  text-align: center;
+}
+
+.region {
+  stroke: #555;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.region:hover {
+  stroke-width: 2;
+  stroke: var(--rouge);
+}
+
+.legend-scale div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 8px;
+}
+
+.legend-scale span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.year-select {
+  background: #000;
+  color: #fff;
+  border: 2px solid #666;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.year-select:focus {
+  outline: none;
+  border-color: #C1121F;
+}
+
+.toggle-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .map-comparator {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  .map__image {
+    max-width: 90%;
+  }
+}
+
 #video {
   display: flex;
   justify-content: center;
@@ -307,7 +444,6 @@ section h3{
   border-radius: 10px;
 }
 
-/* ===== FOOTER / MENTIONS ===== */
 #mentions-content[hidden]{ 
   display:none !important; 
 }
@@ -343,7 +479,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* ======== MENTIONS LONG TEXTE ======== */
 #mentions-content {
   max-width: 1000px;
   margin: 2rem auto 0;
@@ -394,7 +529,6 @@ footer {
   border-bottom: 1px dashed #FF4F4F;
 }
 
-/* Note importante */
 .note-importante {
   margin-top: 2rem !important;
   padding: 1.2rem;
@@ -402,174 +536,3 @@ footer {
   border-left: 4px solid #C1121F;
   border-radius: 5px;
 }
-
-/* 
-   PARTIE CARTES (rangée ici à la fin) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
-
-/* Section principale des cartes */
-#map-section {
-  margin-top: 4rem;
-}
-
-/* Comparateur de 2 cartes */
-.map-comparator {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-/* Une carte */
-.map-wrapper {
-  width: 100%;
-  max-width: 700px;
-  min-width: 300px;
-  margin: 0 auto;
-  background: #000000;
-  border: 6px double #666666;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Titre et contrôles */
-.map-controls {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Boutons haut */
-.toggle-buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-/* Bouton tabac/vape */
-.toggle-btn {
-  background: #000;
-  border: 2px solid #666;
-  color: #999;
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-family: "Lora";
-  font-size: 1rem;
-  transition: .3s;
-}
-
-/* Bouton actif */
-.toggle-btn.active {
-  background: transparent;
-  color: var(--rouge);
-  border-color: var(--rouge);
-}
-
-/* Hover bouton (si non actif) */
-.toggle-btn:hover:not(.active) {
-  border-color: #999;
-  color: #CCC;
-}
-
-/* SVG */
-/* La carte s'adapte à la largeur du bloc */
-.map__image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;   
-}
-
-.map__image svg {
-  width: 100%;
-  height: 100%;
-  max-width: 650px;
-  max-height: 650px;
-  object-fit: contain;  
-}
-
-/* Tooltip (bulle info) */
-#tooltip {
-  position: absolute;
-  padding: 0.7rem 1.2rem;
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid var(--rouge);
-  border-radius: 6px;
-  font-size: 0.95rem;
-  pointer-events: none;
-  display: none;
-  max-width: 280px;
-  text-align: center;
-}
-
-/* Style régions */
-.region {
-  stroke: #555;
-  stroke-width: 1;
-  cursor: pointer;
-  transition: .2s;
-}
-
-/* Survol */
-.region:hover {
-  stroke-width: 2;
-  stroke: var(--rouge);
-}
-
-.legend-scale div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0 8px;
-}
-
-.legend-scale span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 3px;
-}
-
-/* Select année */
-.year-select {
-  background: #000;
-  color: #fff;
-  border: 2px solid #666;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.year-select:focus {
-  outline: none;
-  border-color: #C1121F;
-}
-
-/* Bouton vape désactivé */
-.toggle-btn.disabled {
-  opacity: 0.35;
-  cursor: not-allowed !important;
-  pointer-events: none;
-}
-
-
-
-/* Responsive cartes */
-@media (max-width: 900px) {
-  .map-comparator {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 450px) {
-  .map__image {
-    max-width: 90%;
-  }
-}
-
